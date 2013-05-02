@@ -6,7 +6,7 @@ module.exports = (grunt) ->
     watch:
       lib:
         files: ['src/*.coffee']
-        tasks: ['coffee:lib']
+        tasks: ['coffee:lib', 'test']
 
     coffee:
       lib:
@@ -18,5 +18,10 @@ module.exports = (grunt) ->
         dest: 'lib/'
         ext: '.js'
 
-  grunt.registerTask "default", ['coffee:lib']
+  grunt.registerTask "default", ['coffee:lib', 'test']
 
+  grunt.registerTask 'test', 'run mocha', () ->
+    done = this.async()
+    require('child_process').exec 'mocha ./test/test.js', (err, stdout) ->
+      grunt.log.write stdout
+      done err

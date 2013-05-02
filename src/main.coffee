@@ -11,8 +11,8 @@ runcmd = (cmd) ->
       console.error err
 
 if process.argv.length < 3
-  console.log 'Usage: watchex command [file ...]'
-  return
+  process.stderr.write 'Usage: watchex command [file ...]'
+  process.exit(1)
 
 cmd = process.argv[ 2 ]
 files = process.argv.slice( 3 )
