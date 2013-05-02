@@ -14,6 +14,7 @@ DESCRIPTION
 
 `watcmd` will run a given `command` when given file(s) or folder(s) changes.
 If FILE is not given, then it will watch current folder.
+Key input `Enter` will terminate the command.
 
 EXAMPLES
 --------
