@@ -1,0 +1,17 @@
+{
+  "name": "watcmd",
+  "version": "0.0.0",
+  "description": "watch file/directory and run command if changed.",
+  "main": "lib/main",
+  "bin": {
+    "watcmd": "./bin/watcmd"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "tosh shimayama",
+  "license": "BSD",
+  "devDependencies": {
+  }
+}
