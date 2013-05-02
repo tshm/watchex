@@ -11,7 +11,7 @@ runcmd = (cmd) ->
       console.error err
 
 if process.argv.length < 3
-  console.log 'Usage: watcmd command [file ...]'
+  console.log 'Usage: watchex command [file ...]'
   return
 
 cmd = process.argv[ 2 ]
