@@ -6,7 +6,7 @@ module.exports = (grunt) ->
   grunt.initConfig
     watch:
       lib:
-        files: ['src/*.coffee']
+        files: ['src/*.coffee', 'test/*.js']
         tasks: ['default']
 
     coffeelint:
@@ -15,7 +15,7 @@ module.exports = (grunt) ->
     coffee:
       lib:
         options:
-          sourceMap: true
+          sourceMap: false
         expand: true
         cwd: 'src/'
         src: ['*.coffee']
